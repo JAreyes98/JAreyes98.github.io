@@ -31,17 +31,37 @@ const contactInfo = [
 ]
 
 export function Contact() {
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log(formData)
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("¡Mensaje enviado con éxito!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Error al enviar el mensaje. Revisa la consola.");
+      }
+    } catch (err) {
+      alert("Error de conexión.");
+    } finally {
+      setIsSubmitting(false);
+    }
+};
 
   return (
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
@@ -131,10 +151,14 @@ export function Contact() {
               />
             </div>
 
-            <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-              <Send className="w-4 h-4 mr-2" />
-              Send Message
-            </Button>
+            <Button 
+            type="submit" 
+            disabled={isSubmitting} 
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+          >
+            <Send className="w-4 h-4 mr-2" />
+            {isSubmitting ? "Enviando..." : "Send Message"}
+          </Button>
           </form>
         </div>
       </div>
