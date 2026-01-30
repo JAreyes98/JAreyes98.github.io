@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
+import { toast } from "sonner"
+
 
 const contactInfo = [
   {
@@ -40,28 +42,34 @@ export function Contact() {
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      });
+      })
 
       if (res.ok) {
-        alert("¡Mensaje enviado con éxito!");
-        setFormData({ name: "", email: "", message: "" });
+        toast.success("Message sent successfully!", {
+          description: "I'll get back to you as soon as possible.",
+        })
+        setFormData({ name: "", email: "", message: "" })
       } else {
-        alert("Error al enviar el mensaje. Revisa la consola.");
+        toast.error("Failed to send message.", {
+          description: "Please try again later or contact me directly via email.",
+        })
       }
     } catch (err) {
-      alert("Error de conexión.");
+      toast.error("Connection error.", {
+        description: "Please check your internet connection.",
+      })
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-};
+  }
 
   return (
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
