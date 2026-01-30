@@ -1,3 +1,3 @@
 # Portfolio for Josué Reyes
 
-**[https://vercel.com/josuereyeschevy-3330s-projects/v0-portfolio-for-josue-reyes](https://vercel.com/josuereyeschevy-3330s-projects/v0-portfolio-for-josue-reyes)**
+[Portafolio](https://v0-portfolio-for-josue-reyes-hd3lc924s.vercel.app/)
