@@ -14,7 +14,7 @@ const projects = [
     description:
       "Full-stack healthcare platform with patient management, appointment scheduling, and secure medical records handling with HIPAA compliance.",
     technologies: ["Python", "Django", "PostgreSQL", "React"],
-    github: "#",
+    github: "https://github.com/JAreyes98?tab=repositories&q=HEALTHCONNECT",
   },
   {
     title: "CI/CD Pipeline Automation",
