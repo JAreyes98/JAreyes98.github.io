@@ -6,14 +6,14 @@ const projects = [
     title: "Enterprise API Gateway",
     description:
       "A high-performance API gateway built with Spring Cloud Gateway, featuring rate limiting, authentication, and request routing for microservices architecture.",
-    technologies: ["Java", "Spring Cloud", "Redis", "Docker"],
-    github: "#",
+    technologies: ["Java", "Spring Cloud", "RabbitMQ", "Docker"],
+    github: "https://github.com/JAreyes98/api-gateway",
   },
   {
     title: "Healthcare Management System",
     description:
       "Full-stack healthcare platform with patient management, appointment scheduling, and secure medical records handling with HIPAA compliance.",
-    technologies: ["Python", "Django", "PostgreSQL", "React"],
+    technologies: ["Python", "Django", "PostgreSQL", "React", "RabbitMQ"],
     github: "https://github.com/JAreyes98?tab=repositories&q=HEALTHCONNECT",
   },
   {
