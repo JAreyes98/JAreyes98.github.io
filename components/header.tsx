@@ -4,17 +4,27 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-]
+interface HeaderProps {
+  dict: {
+    about: string
+    skills: string
+    experience: string
+    projects: string
+    contact: string
+  }
+}
 
-export function Header() {
+export function Header({ dict }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const navLinks = [
+    { href: "#about", label: dict.about },
+    { href: "#skills", label: dict.skills },
+    { href: "#experience", label: dict.experience },
+    { href: "#projects", label: dict.projects },
+    { href: "#contact", label: dict.contact },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {

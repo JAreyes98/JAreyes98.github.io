@@ -1,0 +1,157 @@
+{
+  "header": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  }, "bio": {
+    "section_title": "About Me",
+    "main_title": "Systems Engineer with a Passion for Scalable Solutions",
+    "description_1": "With a solid foundation in Systems Engineering from",
+    "description_1_highlight": "UNI (National University of Engineering)",
+    "description_1_suffix": ", I specialize in building high-availability, concurrent web applications that scale.",
+    "description_2": "My expertise spans the entire stack, from designing robust REST APIs with enterprise-grade security to orchestrating containerized deployments in the cloud. I am passionate about solving complex problems and delivering solutions that exceed expectations.",
+    "cards": {
+      "academic": {
+        "title": "Academic Foundation",
+        "desc": "Systems Engineering from UNI with a focus on software architecture and distributed systems."
+      },
+      "availability": {
+        "title": "High Availability",
+        "desc": "Expert in building fault-tolerant systems with 99.9%+ uptime guarantees."
+      },
+      "concurrent": {
+        "title": "Concurrent Systems",
+        "desc": "Specialized in multi-threaded applications and asynchronous processing patterns."
+      }
+    }
+  },"contact": {
+    "section_title": "Contact",
+    "main_title": "Let's Work Together",
+    "subtitle": "Have a project in mind or want to discuss opportunities? I'd love to hear from you.",
+    "footer_note": "I'm currently open to new opportunities and interesting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "message": "Your message..."
+    },
+    "button": {
+      "idle": "Send Message",
+      "submitting": "Sending..."
+    },
+    "messages": {
+      "success_title": "Message sent successfully!",
+      "success_desc": "I'll get back to you as soon as possible.",
+      "error_title": "Failed to send message.",
+      "error_desc": "Please try again later or contact me directly via email.",
+      "conn_error_title": "Connection error.",
+      "conn_error_desc": "Please check your internet connection."
+    }
+  }, "experience": {
+    "section_title": "Experience",
+    "main_title": "Professional Journey",
+    "items": [
+      {
+        "title": "IT Manager",
+        "company": "Campus Physical Therapy",
+        "location": "Remote",
+        "period": "2022 — Present",
+        "description": [
+          "Developed and maintained Python/Django REST APIs to support internal operations and client-facing applications.",
+          "Built responsive UI components using Bootstrap and jQuery for improved user experience.",
+          "Managed virtualized server infrastructure with Proxmox, ensuring 99.9% uptime.",
+          "Implemented automated backup and disaster recovery procedures."
+        ]
+      },
+      {
+        "title": "Freelance Developer",
+        "company": "Porcine Private Company",
+        "location": "Nicaragua",
+        "period": "2022",
+        "description": [
+          "Designed and developed a scanner and inventory management application for livestock tracking.",
+          "Built robust backend services using Go for high-performance data processing.",
+          "Developed native Android application for mobile scanning and real-time inventory updates.",
+          "Implemented barcode/QR scanning functionality for efficient asset management."
+        ]
+      },
+      {
+        "title": "Java Full Stack Developer",
+        "company": "INSS (Instituto Nicaragüense de Seguridad Social)",
+        "location": "Nicaragua",
+        "period": "2019 — 2022",
+        "description": [
+          "Designed and implemented secure REST APIs using Spring Boot and Spring Security with JWT authentication.",
+          "Collaborated with cross-functional teams to deliver mission-critical government applications.",
+          "Optimized database queries and implemented caching strategies for improved performance.",
+          "Participated in code reviews and mentored junior developers on best practices."
+        ]
+      },
+      {
+        "title": "Jr. Programmer",
+        "company": "Casa de las Mangueras",
+        "location": "Nicaragua",
+        "period": "2019 (6 months)",
+        "description": [
+          "Developed desktop applications for inventory management and business operations.",
+          "Designed and implemented database models using SQL Server for efficient data storage.",
+          "Built .NET applications with user-friendly interfaces for warehouse staff.",
+          "Collaborated with stakeholders to gather requirements and deliver solutions."
+        ]
+      }
+    ]
+  }, "footer": {
+    "rights": "All rights reserved."
+  }, "hero": {
+    "badge": "Oracle Certified Professional",
+    "role": "Professional Full-Stack Developer",
+    "description": "Building high-availability, concurrent web applications with modern technologies and best practices.",
+    "buttons": {
+      "contact": "Get in Touch",
+      "projects": "View Projects"
+    }
+  }, "projects": {
+    "section_title": "Projects",
+    "main_title": "Featured Work",
+    "view_github": "View on GitHub",
+    "items": [
+      {
+        "title": "Enterprise API Gateway",
+        "description": "A high-performance API gateway built with Spring Cloud Gateway, featuring rate limiting, authentication, and request routing for microservices architecture."
+      },
+      {
+        "title": "Healthcare Management System",
+        "description": "Full-stack healthcare platform with patient management, appointment scheduling, and secure medical records handling with HIPAA compliance."
+      },
+      {
+        "title": "CI/CD Pipeline Automation",
+        "description": "Automated deployment pipeline using Jenkins and Kubernetes, reducing deployment time by 70% and ensuring zero-downtime releases."
+      }
+    ]
+  }, "tech_stack": {
+    "section_title": "Tech Stack",
+    "main_title": "Technologies I Work With",
+    "categories": {
+      "backend": "Backend",
+      "databases": "Databases",
+      "devops": "DevOps"
+    },
+    "labels": {
+      "clean_code": "Clean Code",
+      "microservices": "Microservices",
+      "containers": "Containers",
+      "version_control": "Version Control"
+    }
+  }, "metadata": {
+    "title": "Josué Reyes | Full-Stack Developer",
+    "description": "Professional Full-Stack Developer specializing in high-availability web applications. Oracle Certified Professional with expertise in Java, Spring, Python, and Cloud."
+  }
+}

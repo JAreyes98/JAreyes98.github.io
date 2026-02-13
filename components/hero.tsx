@@ -2,7 +2,19 @@ import { Award, ChevronDown } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 
-export function Hero() {
+interface HeroProps {
+  dict: {
+    badge: string
+    role: string
+    description: string
+    buttons: {
+      contact: string
+      projects: string
+    }
+  }
+}
+
+export function Hero({ dict }: HeroProps) {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-4xl mx-auto text-center">
@@ -24,7 +36,7 @@ export function Hero() {
 
         <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
           <Award className="w-3 h-3 mr-1" />
-          Oracle Certified Professional
+          {dict.badge}
         </Badge>
 
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground mb-4 tracking-tight text-balance">
@@ -32,11 +44,11 @@ export function Hero() {
         </h1>
 
         <p className="text-xl sm:text-2xl md:text-3xl text-primary font-medium mb-6">
-          Professional Full-Stack Developer
+          {dict.role}
         </p>
 
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-          Building high-availability, concurrent web applications with modern technologies and best practices.
+          {dict.description}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -44,13 +56,13 @@ export function Hero() {
             href="#contact"
             className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
-            Get in Touch
+            {dict.buttons.contact}
           </a>
           <a
             href="#projects"
             className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-secondary transition-colors"
           >
-            View Projects
+            {dict.buttons.projects}
           </a>
         </div>
       </div>

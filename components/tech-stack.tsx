@@ -1,53 +1,85 @@
 import { Database, Server, Cloud, Code2, Layers, Shield, Container, GitBranch } from "lucide-react"
 
-const techCategories = [
-  {
-    title: "Backend",
-    icon: Server,
-    skills: [
-      { name: "Java 8/11", certified: true },
-      { name: "Python", certified: false },
-      { name: "Django", certified: false },
-      { name: "Spring Boot", certified: false },
-      { name: "Spring Data", certified: false },
-      { name: "Spring Security", certified: false },
-      { name: ".NET", certified: false },
-    ],
-  },
-  {
-    title: "Databases",
-    icon: Database,
-    skills: [
-      { name: "T-SQL", certified: false },
-      { name: "PL/SQL", certified: false },
-      { name: "PostgreSQL", certified: false },
-      { name: "MySQL", certified: false },
-    ],
-  },
-  {
-    title: "DevOps",
-    icon: Cloud,
-    skills: [
-      { name: "Docker", certified: false },
-      { name: "Kubernetes", certified: false },
-      { name: "AWS", certified: false },
-      { name: "CI/CD", certified: false },
-      { name: "Proxmox", certified: false },
-    ],
-  },
-]
+interface TechStackProps {
+  dict: {
+    section_title: string
+    main_title: string
+    categories: {
+      backend: string
+      databases: string
+      devops: string
+    }
+    labels: {
+      clean_code: string
+      microservices: string
+      containers: string
+      version_control: string
+    }
+  }
+}
 
-export function TechStack() {
+export function TechStack({ dict }: TechStackProps) {
+  const techCategories = [
+    {
+      title: dict.categories.backend,
+      icon: Server,
+      skills: [
+        { name: "Java 8/11", certified: true },
+        { name: "Python", certified: false },
+        { name: "Django", certified: false },
+        { name: "Spring Boot", certified: false },
+        { name: "Spring Data", certified: false },
+        { name: "Spring Security", certified: false },
+        { name: "Spring Cloud", certified: false },
+        { name: ".NET", certified: false },
+      ],
+    },
+    {
+      title: dict.categories.databases,
+      icon: Database,
+      skills: [
+        { name: "T-SQL", certified: false },
+        { name: "PL/SQL", certified: false },
+        { name: "PostgreSQL", certified: false },
+        { name: "MySQL", certified: false },
+        { name: "Redis", certified: false },
+      ],
+    },
+    {
+      title: dict.categories.devops,
+      icon: Cloud,
+      skills: [
+        { name: "Docker", certified: false },
+        { name: "Kubernetes", certified: false },
+        { name: "AWS", certified: false },
+        { name: "CI/CD", certified: false },
+        { name: "Proxmox", certified: false },
+        { name: "Linux", certified: false },
+      ],
+    },
+  ]
+
+  const concepts = [
+    { icon: Code2, label: dict.labels.clean_code },
+    { icon: Layers, label: dict.labels.microservices },
+    { icon: Container, label: dict.labels.containers },
+    { icon: GitBranch, label: dict.labels.version_control },
+  ]
+
   return (
     <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-card/50">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
           <div className="h-px flex-1 bg-border" />
-          <h2 className="text-sm font-mono text-primary uppercase tracking-wider">Tech Stack</h2>
+          <h2 className="text-sm font-mono text-primary uppercase tracking-wider">
+            {dict.section_title}
+          </h2>
           <div className="h-px flex-1 bg-border" />
         </div>
 
-        <h3 className="text-3xl font-bold text-foreground mb-12 text-center text-balance">Technologies I Work With</h3>
+        <h3 className="text-3xl font-bold text-foreground mb-12 text-center text-balance">
+          {dict.main_title}
+        </h3>
 
         <div className="grid md:grid-cols-3 gap-6">
           {techCategories.map((category) => (
@@ -81,12 +113,7 @@ export function TechStack() {
         </div>
 
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { icon: Code2, label: "Clean Code" },
-            { icon: Layers, label: "Microservices" },
-            { icon: Container, label: "Containers" },
-            { icon: GitBranch, label: "Version Control" },
-          ].map((item) => (
+          {concepts.map((item) => (
             <div
               key={item.label}
               className="flex items-center gap-3 p-4 rounded-lg bg-secondary/50 border border-border"

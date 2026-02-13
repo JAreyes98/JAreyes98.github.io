@@ -1,0 +1,157 @@
+{
+  "header": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },"bio": {
+    "section_title": "Sobre mí",
+    "main_title": "Ingeniero de Sistemas con pasión por las Soluciones Escalables",
+    "description_1": "Con una base en Ingeniería de Sistemas de la",
+    "description_1_highlight": "UNI (Universidad Nacional de Ingeniería)",
+    "description_1_suffix": ", me especializo en construir aplicaciones web de alta disponibilidad y concurrentes que escalan.",
+    "description_2": "Mi experiencia abarca todo el stack, desde el diseño de APIs REST robustas con seguridad de grado empresarial hasta la orquestación de despliegues en contenedores en la nube. Me apasiona resolver problemas complejos y entregar soluciones que superan las expectativas.",
+    "cards": {
+      "academic": {
+        "title": "Base Académica",
+        "desc": "Ingeniería de Sistemas de la UNI con enfoque en arquitectura de software y sistemas distribuidos."
+      },
+      "availability": {
+        "title": "Alta Disponibilidad",
+        "desc": "Experto en la creación de sistemas tolerantes a fallos con garantías de tiempo de actividad del 99.9%+."
+      },
+      "concurrent": {
+        "title": "Sistemas Concurrentes",
+        "desc": "Especializado en aplicaciones multihilo y patrones de procesamiento asíncrono."
+      }
+    }
+  }, "contact": {
+    "section_title": "Contacto",
+    "main_title": "Trabajemos Juntos",
+    "subtitle": "¿Tienes un proyecto en mente o quieres discutir oportunidades? Me encantaría escucharte.",
+    "footer_note": "Actualmente estoy abierto a nuevas oportunidades y proyectos interesantes. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible por responderte!",
+    "labels": {
+      "name": "Nombre",
+      "email": "Correo",
+      "message": "Mensaje",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    },
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "tu@correo.com",
+      "message": "Tu mensaje..."
+    },
+    "button": {
+      "idle": "Enviar Mensaje",
+      "submitting": "Enviando..."
+    },
+    "messages": {
+      "success_title": "¡Mensaje enviado con éxito!",
+      "success_desc": "Te responderé lo antes posible.",
+      "error_title": "Error al enviar el mensaje.",
+      "error_desc": "Por favor intenta de nuevo más tarde o contáctame por correo.",
+      "conn_error_title": "Error de conexión.",
+      "conn_error_desc": "Por favor revisa tu conexión a internet."
+    }
+  }, "experience": {
+    "section_title": "Experiencia",
+    "main_title": "Trayectoria Profesional",
+    "items": [
+      {
+        "title": "Gerente de TI (IT Manager)",
+        "company": "Campus Physical Therapy",
+        "location": "Remoto",
+        "period": "2022 — Presente",
+        "description": [
+          "Desarrollo y mantenimiento de APIs REST en Python/Django para operaciones internas y aplicaciones de cara al cliente.",
+          "Creación de componentes UI responsivos usando Bootstrap y jQuery para mejorar la experiencia de usuario.",
+          "Gestión de infraestructura de servidores virtualizados con Proxmox, garantizando un tiempo de actividad del 99.9%.",
+          "Implementación de procedimientos automatizados de respaldo y recuperación ante desastres."
+        ]
+      },
+      {
+        "title": "Desarrollador Freelance",
+        "company": "Porcine Private Company",
+        "location": "Nicaragua",
+        "period": "2022",
+        "description": [
+          "Diseño y desarrollo de una aplicación de escaneo y gestión de inventario para seguimiento de ganado.",
+          "Construcción de servicios backend robustos usando Go para procesamiento de datos de alto rendimiento.",
+          "Desarrollo de aplicación nativa Android para escaneo móvil y actualizaciones de inventario en tiempo real.",
+          "Implementación de funcionalidad de escaneo de códigos de barras/QR para una gestión eficiente de activos."
+        ]
+      },
+      {
+        "title": "Desarrollador Java Full Stack",
+        "company": "INSS (Instituto Nicaragüense de Seguridad Social)",
+        "location": "Nicaragua",
+        "period": "2019 — 2022",
+        "description": [
+          "Diseño e implementación de APIs REST seguras usando Spring Boot y Spring Security con autenticación JWT.",
+          "Colaboración con equipos multidisciplinarios para entregar aplicaciones gubernamentales de misión crítica.",
+          "Optimización de consultas a bases de datos e implementación de estrategias de caché para mejorar el rendimiento.",
+          "Participación en revisiones de código y mentoría a desarrolladores junior sobre mejores prácticas."
+        ]
+      },
+      {
+        "title": "Programador Jr.",
+        "company": "Casa de las Mangueras",
+        "location": "Nicaragua",
+        "period": "2019 (6 meses)",
+        "description": [
+          "Desarrollo de aplicaciones de escritorio para gestión de inventario y operaciones comerciales.",
+          "Diseño e implementación de modelos de bases de datos usando SQL Server para almacenamiento eficiente.",
+          "Construcción de aplicaciones .NET con interfaces intuitivas para el personal de bodega.",
+          "Colaboración con partes interesadas para recopilar requisitos y entregar soluciones."
+        ]
+      }
+    ]
+  }, "footer": {
+    "rights": "Todos los derechos reservados."
+  }, "hero": {
+    "badge": "Certificado Profesional por Oracle",
+    "role": "Desarrollador Full-Stack Profesional",
+    "description": "Construyendo aplicaciones web de alta disponibilidad y concurrentes con tecnologías modernas y mejores prácticas.",
+    "buttons": {
+      "contact": "Contáctame",
+      "projects": "Ver Proyectos"
+    }
+  }, "projects": {
+    "section_title": "Proyectos",
+    "main_title": "Trabajos Destacados",
+    "view_github": "Ver en GitHub",
+    "items": [
+      {
+        "title": "Gateway de API Empresarial",
+        "description": "Un gateway de API de alto rendimiento construido con Spring Cloud Gateway, con limitación de tasa, autenticación y enrutamiento de solicitudes para arquitectura de microservicios."
+      },
+      {
+        "title": "Sistema de Gestión de Salud",
+        "description": "Plataforma de salud full-stack con gestión de pacientes, programación de citas y manejo seguro de registros médicos con cumplimiento HIPAA."
+      },
+      {
+        "title": "Automatización de Pipeline CI/CD",
+        "description": "Pipeline de despliegue automatizado usando Jenkins y Kubernetes, reduciendo el tiempo de despliegue en un 70% y asegurando lanzamientos sin tiempo de inactividad."
+      }
+    ]
+  }, "tech_stack": {
+    "section_title": "Stack Tecnológico",
+    "main_title": "Tecnologías que Utilizo",
+    "categories": {
+      "backend": "Backend",
+      "databases": "Bases de Datos",
+      "devops": "DevOps"
+    },
+    "labels": {
+      "clean_code": "Código Limpio",
+      "microservices": "Microservicios",
+      "containers": "Contenedores",
+      "version_control": "Control de Versiones"
+    }
+  }, "metadata": {
+    "title": "Josué Reyes | Desarrollador Full-Stack",
+    "description": "Desarrollador Full-Stack profesional especializado en aplicaciones web de alta disponibilidad. Experto certificado por Oracle en Java, Spring, Python y Cloud."
+  }
+}

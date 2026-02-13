@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -10,36 +9,44 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { toast } from "sonner"
 
+interface ContactProps {
+  dict: any // Ideally define a proper interface based on the JSON structure
+}
 
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "josuereyes98@live.com",
-    href: "mailto:josuereyes98@live.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 415-879-3003",
-    href: "tel:+14158793003",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Nicaragua",
-    href: null,
-  },
-]
-
-export function Contact() {
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
+export function Contact({ dict }: ContactProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   })
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: dict.labels.email,
+      value: "josuereyes98@live.com",
+      href: "mailto:josuereyes98@live.com",
+    },
+    {
+      icon: Phone,
+      label: dict.labels.phone,
+      value: "+1 415-879-3003",
+      href: "tel:+14158793003",
+    },
+    {
+      icon: Phone,
+      label: dict.labels.phone,
+      value: "+505 84530828",
+      href: "tel:+50584530828",
+    },
+    {
+      icon: MapPin,
+      label: dict.labels.location,
+      value: "Nicaragua",
+      href: null,
+    },
+  ]
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -53,18 +60,18 @@ export function Contact() {
       })
 
       if (res.ok) {
-        toast.success("Message sent successfully!", {
-          description: "I'll get back to you as soon as possible.",
+        toast.success(dict.messages.success_title, {
+          description: dict.messages.success_desc,
         })
         setFormData({ name: "", email: "", message: "" })
       } else {
-        toast.error("Failed to send message.", {
-          description: "Please try again later or contact me directly via email.",
+        toast.error(dict.messages.error_title, {
+          description: dict.messages.error_desc,
         })
       }
     } catch (err) {
-      toast.error("Connection error.", {
-        description: "Please check your internet connection.",
+      toast.error(dict.messages.conn_error_title, {
+        description: dict.messages.conn_error_desc,
       })
     } finally {
       setIsSubmitting(false)
@@ -76,13 +83,17 @@ export function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
           <div className="h-px flex-1 bg-border" />
-          <h2 className="text-sm font-mono text-primary uppercase tracking-wider">Contact</h2>
+          <h2 className="text-sm font-mono text-primary uppercase tracking-wider">
+            {dict.section_title}
+          </h2>
           <div className="h-px flex-1 bg-border" />
         </div>
 
-        <h3 className="text-3xl font-bold text-foreground mb-4 text-center text-balance">{"Let's Work Together"}</h3>
+        <h3 className="text-3xl font-bold text-foreground mb-4 text-center text-balance">
+          {dict.main_title}
+        </h3>
         <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-          {"Have a project in mind or want to discuss opportunities? I'd love to hear from you."}
+          {dict.subtitle}
         </p>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -110,9 +121,7 @@ export function Contact() {
 
             <div className="p-6 rounded-xl bg-card border border-border">
               <p className="text-muted-foreground text-sm leading-relaxed">
-                {
-                  "I'm currently open to new opportunities and interesting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
-                }
+                {dict.footer_note}
               </p>
             </div>
           </div>
@@ -120,11 +129,11 @@ export function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name" className="text-foreground">
-                Name
+                {dict.labels.name}
               </Label>
               <Input
                 id="name"
-                placeholder="Your name"
+                placeholder={dict.placeholders.name}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="bg-card border-border focus:border-primary"
@@ -133,12 +142,12 @@ export function Contact() {
 
             <div className="space-y-2">
               <Label htmlFor="email" className="text-foreground">
-                Email
+                {dict.labels.email}
               </Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="your@email.com"
+                placeholder={dict.placeholders.email}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="bg-card border-border focus:border-primary"
@@ -147,11 +156,11 @@ export function Contact() {
 
             <div className="space-y-2">
               <Label htmlFor="message" className="text-foreground">
-                Message
+                {dict.labels.message}
               </Label>
               <Textarea
                 id="message"
-                placeholder="Your message..."
+                placeholder={dict.placeholders.message}
                 rows={5}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -159,14 +168,14 @@ export function Contact() {
               />
             </div>
 
-            <Button 
-            type="submit" 
-            disabled={isSubmitting} 
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-          >
-            <Send className="w-4 h-4 mr-2" />
-            {isSubmitting ? "Enviando..." : "Send Message"}
-          </Button>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+            >
+              <Send className="w-4 h-4 mr-2" />
+              {isSubmitting ? dict.button.submitting : dict.button.idle}
+            </Button>
           </form>
         </div>
       </div>
