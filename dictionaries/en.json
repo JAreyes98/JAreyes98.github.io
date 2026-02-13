@@ -152,6 +152,8 @@
     }
   }, "metadata": {
     "title": "Josué Reyes | Full-Stack Developer",
-    "description": "Professional Full-Stack Developer specializing in high-availability web applications. Oracle Certified Professional with expertise in Java, Spring, Python, and Cloud."
+    "description": "Professional Full-Stack Developer specializing in high-availability web applications. Oracle Certified Professional with expertise in Java, Spring, Python, and cloud.",
+    "og_title": "Josué Reyes | Full-Stack Developer",
+    "og_description": "Senior Java Developer and Cloud Solutions Architect."
   }
 }
