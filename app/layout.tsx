@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   title: "Josué Reyes | Full-Stack Developer",
   description:
     "Professional Full-Stack Developer specializing in high-availability web applications. Oracle Certified Professional with expertise in Java, Spring, Python, Django, and cloud technologies.",
+  keywords: [
+    "Desarrollador Nicaragua",
+    "Desarrollador Java",
+    "Java Developer Nicaragua",
+    "Desarrollador Latinoamérica",
+    "Full-Stack Developer",
+    "Spring Boot",
+    "Oracle Certified Professional"
+  ],
+  alternates: {
+    canonical: "https://tu-dominio.com",
+    languages: {
+      "en-US": "https://jdreyes.dev/en",
+      "es-NI": "https://jdreyes.dev/es",
+    },
+  },
+  openGraph: {
+    title: "Josué Reyes | Full-Stack Developer",
+    description: "Desarrollador Java Senior en Nicaragua y Latinoamérica.",
+    url: "https://tu-dominio.com",
+    siteName: "Josué Reyes Portfolio",
+    locale: "es_NI",
+    type: "website",
+  },
     generator: 'v0.app'
 }
 
@@ -25,6 +49,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      </head>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
